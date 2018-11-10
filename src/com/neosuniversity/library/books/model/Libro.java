@@ -8,6 +8,16 @@ public class Libro {
     private String autor;
     private String editorial;
 
+    @Override
+    public String toString() {
+        return "Libro{" +
+                "id=" + id +
+                ", nombreLibro='" + nombreLibro + '\'' +
+                ", autor='" + autor + '\'' +
+                ", editorial='" + editorial + '\'' +
+                '}';
+    }
+
     public int getId() {
         return id;
     }
