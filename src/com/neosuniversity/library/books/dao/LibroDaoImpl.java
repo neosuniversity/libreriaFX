@@ -17,8 +17,9 @@ public class LibroDaoImpl implements LibroDao{
     private PreparedStatement pst=null;
 
     @Override
-    public int insertLibro(Libro libro) throws SQLException, ClassNotFoundException {
+    public int insertLibro(Libro libro) throws Exception {
         connection = new ConnectionDB().createConnectionDB();
+        ConnectionDB.printDbStatus();
         int rows = 0;
 
         String queryInsertLibro= "INSERT INTO libros (nombrelibro, autor, editorial) values (?, ? , ?) ";
@@ -34,9 +35,9 @@ public class LibroDaoImpl implements LibroDao{
     }
 
     @Override
-    public List<Libro> getAllLibros() throws SQLException, ClassNotFoundException {
+    public List<Libro> getAllLibros() throws Exception {
         connection = new ConnectionDB().createConnectionDB();
-
+        ConnectionDB.printDbStatus();
         List<Libro> lstLibros = new ArrayList<>();
         String queryAllLibros= "SELECT  id_libro, nombreLibro, autor, editorial FROM libros ORDER BY id_libro";
         stmt = connection.createStatement();

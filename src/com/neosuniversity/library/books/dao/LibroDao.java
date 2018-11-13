@@ -17,7 +17,7 @@ public interface LibroDao {
      * @throws SQLException
      * @throws ClassNotFoundException
      */
-    int insertLibro(Libro libro) throws SQLException, ClassNotFoundException;
+    int insertLibro(Libro libro) throws Exception;
 
     /**
      * get all libros from data base
@@ -25,7 +25,7 @@ public interface LibroDao {
      * @throws SQLException
      * @throws ClassNotFoundException
      */
-    List<Libro> getAllLibros() throws SQLException, ClassNotFoundException;
+    List<Libro> getAllLibros() throws Exception;
 
     /**
      * update libro on data base

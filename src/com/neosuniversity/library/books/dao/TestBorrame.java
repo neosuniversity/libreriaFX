@@ -7,11 +7,11 @@ import java.util.List;
 
 public class TestBorrame {
 
-    public static void main (String args[]) throws SQLException, ClassNotFoundException {
+    public static void main (String args[]) throws Exception {
         Libro libro = new Libro("C++","CARBALLIDO","MC");
 
         LibroDao libroDao = new LibroDaoImpl();
-        System.out.println("INSERT ROWS: "+ libroDao.insertLibro(libro));
+      //  System.out.println("INSERT ROWS: "+ libroDao.insertLibro(libro));
 
         List<Libro> lstLibro = libroDao.getAllLibros();
         lstLibro.stream().forEach(book-> System.out.println(book.toString()) );

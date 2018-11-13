@@ -1,5 +1,6 @@
 package com.neosuniversity.library.books.dao;
 
+import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -13,18 +14,18 @@ public interface IConnectionDB {
     /**
      * create new connection from data base
      * @return Connection
-     * @throws ClassNotFoundException throws Exception
-     * @throws SQLException throws Exception
+     * @throws Exception throws Exception
      */
-    Connection createConnectionDB() throws ClassNotFoundException, SQLException;
+    Connection createConnectionDB() throws Exception;
 
-    /**
-     * close connection from data base
-     * @param connection from data base
-     * @param stmt
-     * @param rs
-     * @param pst
-     */
+
+        /**
+         * close connection from data base
+         * @param connection from data base
+         * @param stmt
+         * @param rs
+         * @param pst
+         */
     static void closeConexionDB(Connection connection, Statement stmt, ResultSet rs, PreparedStatement pst  ) {
 
         if (connection != null) {
