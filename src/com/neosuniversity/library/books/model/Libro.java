@@ -8,6 +8,16 @@ public class Libro {
     private String autor;
     private String editorial;
 
+    public Libro(){
+    }
+
+    public Libro(int id, String nombreLibro, String autor, String editorial) {
+        this.id = id;
+        this.nombreLibro = nombreLibro;
+        this.autor = autor;
+        this.editorial = editorial;
+    }
+
     @Override
     public String toString() {
         return "Libro{" +
