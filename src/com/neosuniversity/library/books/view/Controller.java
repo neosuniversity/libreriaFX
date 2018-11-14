@@ -3,12 +3,16 @@ package com.neosuniversity.library.books.view;
 import com.neosuniversity.library.books.dao.LibroDao;
 import com.neosuniversity.library.books.dao.LibroDaoImpl;
 import com.neosuniversity.library.books.model.Libro;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 
 import java.sql.SQLException;
+import java.util.Optional;
 
 public class Controller {
 
@@ -24,6 +28,8 @@ public class Controller {
     private Libro libro;
 
     private LibroDao libroDao;
+
+    private ObservableList<Libro> librosViewList;
 
     public Controller () {
         libroDao = new LibroDaoImpl();
@@ -48,6 +54,11 @@ public class Controller {
 
             libroDao.insertLibro(libro);
              this.showSuccessDialog();
+
+             //reload table
+            this.librosViewList.clear();
+
+            librosViewList.addAll(this.libroDao.getAllLibros());
         } catch (SQLException e) {
             this.showErrorDialog(e.getMessage());
         } catch (ClassNotFoundException e) {
@@ -60,6 +71,7 @@ public class Controller {
     public void showSuccessDialog() {
         MyAlert alert = new MyAlert("Libros", "Alta Libros", "El alta del libro fue satisfactoria",
                 Alert.AlertType.INFORMATION);
+
         alert.show();
     }
 
@@ -67,5 +79,11 @@ public class Controller {
         MyAlert alert = new MyAlert("Libros", "Alta Libros", error,
                 Alert.AlertType.ERROR);
         alert.show();
+    }
+
+
+
+    public void setViewListModel(ObservableList<Libro> librosViewList) {
+        this.librosViewList = librosViewList;
     }
 }

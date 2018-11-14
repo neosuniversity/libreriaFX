@@ -64,7 +64,13 @@ public class ListLibrosController {
     //abrir la pantalla de alta
     public void actionAbrir(ActionEvent event) throws IOException {
 
-        Parent root = FXMLLoader.load(getClass().getResource("/com/neosuniversity/library/books/view/altaLibro.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/neosuniversity/library/books/view/altaLibro.fxml"));
+        Parent root = (Parent) loader.load();
+
+
+        Controller controller = loader.getController();
+        controller.setViewListModel(librosViewList);
+
         Stage stage = new Stage();
         stage.setTitle("Alta Libro");
         stage.setScene(new Scene(root, 600, 500));
