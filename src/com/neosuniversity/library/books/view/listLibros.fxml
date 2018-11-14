@@ -5,6 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
+
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neosuniversity.library.books.view.ListLibrosController">
    <children>
       <TableView fx:id="dataLibros" layoutX="30.0" layoutY="14.0" prefHeight="325.0" prefWidth="541.0">
@@ -15,6 +16,7 @@
             <TableColumn fx:id="editorialCol" prefWidth="136.0" text="Editorial" />
         </columns>
       </TableView>
+
       <Button fx:id="btnNuevo" layoutX="269.0" layoutY="359.0" mnemonicParsing="false" onAction="#actionAbrir" text="Nuevo Libro" />
    </children>
 </AnchorPane>

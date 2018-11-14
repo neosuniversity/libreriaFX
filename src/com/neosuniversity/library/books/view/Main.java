@@ -10,9 +10,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/com/neosuniversity/library/books/view/altaLibro.fxml"));
-        primaryStage.setTitle("Nuevo Libro");
-        primaryStage.setScene(new Scene(root, 500, 500));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/neosuniversity/library/books/view/listLibros.fxml"));
+        primaryStage.setTitle("Lista de Libros");
+        primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();
     }
 

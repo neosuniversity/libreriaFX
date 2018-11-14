@@ -1,7 +1,7 @@
 package com.neosuniversity.library.books.model;
 
 
-public class Libro {
+public class Libro  {
 
     private int id;
     private String nombreLibro;
