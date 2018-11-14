@@ -16,6 +16,6 @@
             <TableColumn fx:id="editorialCol" prefWidth="136.0" text="Editorial" />
         </columns>
       </TableView>
-      <Button fx:id="btnNuevo" layoutX="269.0" layoutY="359.0" mnemonicParsing="false" onAction="#actionAbrir" text="Nuevo Libro" />
+      <Button fx:id="btnNuevo" layoutX="269.0" layoutY="359.0" mnemonicParsing="false"  text="Nuevo Libro" />
    </children>
 </AnchorPane>
