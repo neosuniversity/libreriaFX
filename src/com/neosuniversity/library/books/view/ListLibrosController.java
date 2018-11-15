@@ -1,5 +1,6 @@
 package com.neosuniversity.library.books.view;
 
+import com.neosuniversity.library.books.dao.LibroDao;
 import com.neosuniversity.library.books.dao.LibroDaoImpl;
 import com.neosuniversity.library.books.model.Libro;
 import javafx.collections.FXCollections;
@@ -36,9 +37,17 @@ public class ListLibrosController {
     @FXML
     private TableColumn<Libro, String> editorialCol;
 
-    private ObservableList<Libro> librosViewList = FXCollections.observableArrayList();
+    private ObservableList<Libro> librosViewList;
 
-    private LibroDaoImpl libroDao = new LibroDaoImpl();
+    private LibroDao libroDao;
+
+    //Cambio realizado y hay que actualizar el documento
+    public ListLibrosController(){
+         this.librosViewList = FXCollections.observableArrayList();// se agrego el modelo al componete intermedio
+         this.libroDao = new LibroDaoImpl();
+    }
+
+
 
 
     @FXML
