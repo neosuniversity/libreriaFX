@@ -13,9 +13,9 @@ USE `library`;
 DROP TABLE IF EXISTS `libros`;
 CREATE TABLE IF NOT EXISTS `libros` (
   `id_libro`    int(11)      NOT NULL,
-  `nombrelibro` varchar(50)  NULL,
-  `autor`       varchar(50)  NULL,
-  `editorial`   varchar(50)  NULL
+  `nombrelibro` varchar(150)  NULL,
+  `autor`       varchar(150)  NULL,
+  `editorial`   varchar(150)  NULL
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 
 ALTER TABLE `libros` ADD PRIMARY KEY (`id_libro`);
