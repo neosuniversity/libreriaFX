@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.4" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.neosuniversity.library.books.view.Controller">
+   <children>
+      <Label layoutX="93.0" layoutY="74.0" prefHeight="17.0" prefWidth="96.0" text="Nombre Libro" />
+      <Label layoutX="93.0" layoutY="127.0" prefHeight="17.0" prefWidth="96.0" text="Autor" />
+      <Label layoutX="93.0" layoutY="192.0" prefHeight="17.0" prefWidth="96.0" text="Editorial" />
+      <TextField fx:id="nombreLibro" layoutX="208.0" layoutY="69.0" />
+      <TextField fx:id="autor" layoutX="208.0" layoutY="122.0" />
+      <TextField fx:id="editorial" layoutX="208.0" layoutY="187.0" />
+      <Button layoutX="93.0" layoutY="283.0" mnemonicParsing="false" onAction="#actionAceptar" text="Aceptar" />
+      <Button layoutX="223.0" layoutY="283.0" mnemonicParsing="false" text="Cancelar" />
+   </children>
+</AnchorPane>
