@@ -25,8 +25,7 @@ Ejemplo Windows: C:\software
  ![Image of import](https://github.com/neosuniversity/libreriaFX/blob/master/src/images/vm_fx.png)
  
  8. Si cambia la ruta del unzip o nombre de carpetas de los pasos 5,6 y 7 debera configurar en el su Intellij IDEA lo siguiente:
- En las opciones de VM: el proyecto tiene configurado lo siguiente: C:/software/javafx-sdk-11.0.2/lib --add-modules=javafx.controls,javafx.fxml
- Debera reemplazar : <TU_PATH_UNZIP>/javafx-sdk-11.0.2/lib --add-modules=javafx.controls,javafx.fxml
+ Debera reemplazar : **<TU_PATH_UNZIP>**/javafx-sdk-11.0.2/lib --add-modules=javafx.controls,javafx.fxml
  
  9. Se recomienda dejar las configuraciones por default ya que esto hara que el soporte a dudas sea mas rapido de resolver.
 
